@@ -22,4 +22,4 @@ $username = $secret->getSecret('kv-db1-username');
 $password = $secret->getSecret('kv-db1-password');
 $db_name  = $secret->getSecret('kv-db1-dbname');
 
-$sslcert = 'ssl/DigiCertGlobalRootCA.crt.pem';
+//$sslcert = 'ssl/DigiCertGlobalRootCA.crt.pem';
