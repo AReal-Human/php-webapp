@@ -16,6 +16,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 // Step 1: Update to your Key Vault URI
 $secret = new AzKeyVault\Secret('https://keyvault01-dsdfw2i83321.vault.azure.net');
+$secrets = $secret->getSecrets();
 
 $host     = $secret->getSecret('kv-db1-host');
 $username = $secret->getSecret('kv-db1-username');
