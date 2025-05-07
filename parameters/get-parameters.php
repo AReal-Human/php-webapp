@@ -15,13 +15,11 @@
 require __DIR__ . '/vendor/autoload.php';
 
 // Step 1: Update to your Key Vault URI
-$secret = new AzKeyVault\Secret('https://keyvault01-dsdfw2i83321.vault.azure.net/');
+$secret = new AzKeyVault\Secret('https://keyvault01-dsdfw2i8332.vault.azure.net/');
 
-// Step 2: Make sure these secret names match those in Terraform Key Vault config
 $host     = $secret->getSecret('kv-db1-host');
 $username = $secret->getSecret('kv-db1-username');
 $password = $secret->getSecret('kv-db1-password');
 $db_name  = $secret->getSecret('kv-db1-dbname');
 
-// Step 3: SSL cert path (must be in your repo if using MySQL with SSL)
 $sslcert = 'ssl/DigiCertGlobalRootCA.crt.pem';
