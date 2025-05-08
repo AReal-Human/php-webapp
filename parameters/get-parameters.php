@@ -12,15 +12,22 @@
  */
 
 // Include Composer autoload (installed via GitHub deployment)
-require __DIR__ . '/vendor/autoload.php';
+// require __DIR__ . '/vendor/autoload.php';
 
-// Step 1: Update to your Key Vault URI
-$secret = new AzKeyVault\Secret('https://keyvault01-dsdfw2i83321.vault.azure.net');
+// // Step 1: Update to your Key Vault URI
+// $secret = new AzKeyVault\Secret('https://keyvault01-dsdfw2i83321.vault.azure.net');
 //$secrets = $secret->getSecrets();
 
-$host     = $secret->getSecret('kv-db1-host');
-$username = $secret->getSecret('kv-db1-username');
-$password = $secret->getSecret('kv-db1-password');
-$db_name  = $secret->getSecret('kv-db1-dbname');
+// $host     = $secret->getSecret('kv-db1-host');
+// $username = $secret->getSecret('kv-db1-username');
+// $password = $secret->getSecret('kv-db1-password');
+// $db_name  = $secret->getSecret('kv-db1-dbname');
 
-$sslcert = 'ssl/DigiCertGlobalRootCA.crt.pem';
+// $sslcert = 'ssl/DigiCertGlobalRootCA.crt.pem';
+
+$host       = getenv('DB_HOST');
+$username   = getenv('DB_USERNAME');
+$password   = getenv('DB_PASSWORD');
+$db_name     = getenv('DB_DATABASE');
+$sslcert    = 'ssl/DigiCertGlobalRootCA.crt.pem';
+#$sslcert   = getenv('DB_SSLCERT');
