@@ -10,7 +10,7 @@
 </form>
 
  <?php
-       include 'get-parameters.php';
+       include __DIR__ . '/get-parameters.php';
 
        //Query to get the GDP
         $sql = "select name, gdp from countrydata_table;";
