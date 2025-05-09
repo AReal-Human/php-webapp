@@ -11,7 +11,7 @@
 </form>
 
  <?php
-        include 'parameters/get-parameters.php';
+         include 'get-parameters.php';
 
         //Query to get the GDP
         $sql = "select name, mobilephones from countrydata_table;";

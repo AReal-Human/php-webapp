@@ -11,7 +11,7 @@
 </form>
 
  <?php
-       include 'parameters/get-parameters.php';
+       include 'get-parameters.php';
 
         //Query for childhood mortality rate
         $sql = "select name, mortalityunder5 from countrydata_table;";
