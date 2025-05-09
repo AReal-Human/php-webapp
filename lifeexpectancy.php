@@ -10,7 +10,7 @@
 </form>
 
  <?php
-        include 'get-parameters.php';
+        include 'parameters/get-parameters.php';
         //SQL to get birthrate and life expectancy
         $sql = "select name, birthrate, lifeexpectancy from countrydata_table;";
 //        $conn = new mysqli($_SESSION['ep'], $_SESSION['un'], $_SESSION['pw'], $_SESSION['db']);

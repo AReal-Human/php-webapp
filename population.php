@@ -10,7 +10,7 @@
 </form>
 
  <?php
-        include 'get-parameters.php';
+        include 'parameters/get-parameters.php';
         //Query for the population data
 	$sql = "select name, population, populationurban from countrydata_table;";
 
