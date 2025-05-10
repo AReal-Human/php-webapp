@@ -4,7 +4,8 @@ on:
   push:
     branches:
       - main
-
+  workflow_dispatch:
+    
 jobs:
 
   check-php:
@@ -20,9 +21,9 @@ jobs:
     runs-on: ubuntu-latest
     environment: env
     env:
-        subscription_id: ${{ secrets.TF_VAR_SUBSCRIPTION_ID }}
-        app_service_name: ${{ vars.TF_VAR_APP_SERVICE_NAME }}
-        resource_group_name: ${{ vars.TF_VAR_RESOURCE_GROUP_NAME }}
+        subscription_id: ${{ secrets.SUBSCRIPTION_ID }}
+        app_service_name: ${{ vars.APP_SERVICE_NAME }}
+        resource_group_name: ${{ vars.RESOURCE_GROUP_NAME }}
 
     steps:
       - name: Azure Login
