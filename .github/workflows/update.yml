@@ -5,7 +5,7 @@ on:
     branches:
       - main
   workflow_dispatch:
-    
+
 jobs:
 
   check-php:
@@ -35,4 +35,5 @@ jobs:
         run: az account set --subscription ${{ env.subscription_id }}
 
       - name: Pull Latest
+        continue-on-error: true
         run: az webapp deployment source sync --name ${{ env.app_service_name }} --resource-group ${{ env.resource_group_name }}
